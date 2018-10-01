@@ -6,4 +6,54 @@ function onStart(){
 $this['page']='Small Claims';
 }
 ==
- {% partial "site/pageheader" %}
+{% partial "site/pageheader" %}
+<!--ABOUT US ********************************************************************************************-->
+<section id="about-us">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="ts-block pr-3">
+                    <div class="ts-title">
+                        <h2>Small Claims</h2>
+                    </div>
+                    <!--end ts-title-->
+                    <p>
+                        With the increase in the jurisdiction of Small Claims Court to $25,000, it has become relatively easier for businesses and individuals to use the court process for the enforcement of contracts, debt recovery, and for compensation for civil damages. However, due to lack of knowledge, settlement and debt collection can be quite intimidating.
+                    </p>
+                    <p>Vagans Legal has years of experience and can help you with Small Claims Court legal process from beginning to end. While acting on behalf of Plaintiffs or Defendants, their legal representatives can assist with issues related to:</p>
+                    <h4 style="font-weight: bold; ">Claims for money owed under an agreement:</h4>
+                    <ul type="square">
+                        <li><span style=" font-weight: bold; font-size: 20px; margin-right: 15px;">•</span> Unpaid accounts for goods or services sold and delivered</li>
+                        <li><span style=" font-weight: bold; font-size: 20px; margin-right: 15px;">•</span> Unpaid loans</li>
+                        <li><span style=" font-weight: bold; font-size: 20px; margin-right: 15px;">•</span> Unpaid rent</li>
+                        <li><span style=" font-weight: bold; font-size: 20px; margin-right: 15px;">•</span> NSF cheques</li>
+                    </ul>
+                    <h4 style="font-weight: bold; ">Claims for damages:</h4>
+                    <ul type="square">
+                        <li><span style=" font-weight: bold; font-size: 20px; margin-right: 15px;">•</span> Property damage</li>
+                        <li><span style=" font-weight: bold; font-size: 20px; margin-right: 15px;">•</span> Clothes damaged by a dry cleaner</li>
+                        <li><span style=" font-weight: bold; font-size: 20px; margin-right: 15px;">•</span> Personal injuries</li>
+                        <li><span style=" font-weight: bold; font-size: 20px; margin-right: 15px;">•</span> Breach of contract</li>
+                    </ul>
+
+
+                </div>
+            </div>
+            <!--end col-md-6-->
+        </div>
+        <!--end row-->
+    </div>
+    <!--end container-->
+
+    <div class="ts-background d-none d-sm-block" data-bg-color="#fafafa" data-bg-parallax1="scroll" data-bg-parallax-speed="3">
+        <div class="owl-carousel w-50 ts-push-left__100 h-100 ts-parallax-element1" data-owl-loop="1" data-owl-nav-container="#carousel-external-control">
+            <div class="ts-background-image" data-bg-image="{{'assets/img/wecando.jpg'|theme}}"></div>
+            <div class="ts-background-image" data-bg-image="{{'assets/img/wecando2.jpg'|theme}}"></div>
+        </div>
+        <!--end owl-carousel-->
+    </div>
+    <!--end ts-background-->
+
+</section>
+<!--END ABOUT US ****************************************************************************************-->
+{% partial "site/footer" %}

@@ -1,0 +1,55 @@
+title = "License Appeal Tribunal Service"
+url = "/Licensing"
+layout = "default"
+==
+function onStart(){
+$this['page']='License Appeal Tribunal';
+}
+==
+{% partial "site/pageheader" %}
+<!--ABOUT US ********************************************************************************************-->
+<section id="about-us">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="ts-block pr-3">
+                    <div class="ts-title">
+                        <h2>License Appeal Tribunal</h2>
+                    </div>
+                    <!--end ts-title-->
+                    <p>
+                        The Licence Appeal Tribunal hears appeals from decisions concerning compensation claims and licensing activities regulated by the Ministry of Consumer Services, the Ministry of Transportation, the Ministry of Children and Youth Services, the Ministry of Training, Colleges and Universities, the Ministry of Municipal Affairs and Housing, and the Ministry of Community Safety and Correctional Services.
+                    </p>
+                    <p>The Licence Appeal Tribunal is designated as part of an adjudicative tribunal cluster by regulation made under the Adjudicative Tribunals Accountability, Governance and Appointments Act, 2009.</p>
+
+                    <ul type="square">
+                        <li><span style=" font-weight: bold; font-size: 20px; margin-right: 15px;">•</span> Appearance in court</li>
+                        <li><span style=" font-weight: bold; font-size: 20px; margin-right: 15px;">•</span> Legal Advice</li>
+                        <li><span style=" font-weight: bold; font-size: 20px; margin-right: 15px;">•</span> Speeding Tickets</li>
+                        <li><span style=" font-weight: bold; font-size: 20px; margin-right: 15px;">•</span>Parking Violations</li>
+                        <li><span style=" font-weight: bold; font-size: 20px; margin-right: 15px;">•</span> Requesting a Trial</li>
+                        <li><span style=" font-weight: bold; font-size: 20px; margin-right: 15px;">•</span> Necessary Paperwork</li>
+                        <li><span style=" font-weight: bold; font-size: 20px; margin-right: 15px;">•</span>Prosecution of Contraventions</li>
+                    </ul>
+
+
+                </div>
+            </div>
+            <!--end col-md-6-->
+        </div>
+        <!--end row-->
+    </div>
+    <!--end container-->
+
+    <div class="ts-background d-none d-sm-block" data-bg-color="#fafafa" data-bg-parallax1="scroll" data-bg-parallax-speed="3">
+        <div class="owl-carousel w-50 ts-push-left__100 h-100 ts-parallax-element1" data-owl-loop="1" data-owl-nav-container="#carousel-external-control">
+            <div class="ts-background-image" data-bg-image="{{'assets/img/wecando.jpg'|theme}}"></div>
+            <div class="ts-background-image" data-bg-image="{{'assets/img/wecando2.jpg'|theme}}"></div>
+        </div>
+        <!--end owl-carousel-->
+    </div>
+    <!--end ts-background-->
+
+</section>
+<!--END ABOUT US ****************************************************************************************-->
+{% partial "site/footer" %}
