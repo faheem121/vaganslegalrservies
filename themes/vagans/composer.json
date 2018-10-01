@@ -1,0 +1,23 @@
+{
+    "name": "october/Vagans-Service",
+    "type": "Vagans-Service",
+    "description": "Vagans Service",
+    "keywords": ["Vagans Service"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Faheem Ahmed",
+            "email": "faheem_khan662@yahoo.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "composer/installers": "~1.0"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}

@@ -1,0 +1,48 @@
+description = "Default"
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+             <title>Leagal Services - {{ this.page.title }}</title>
+        <meta name="description" content="{{ this.page.meta_description }}">
+        <meta name="title" content="{{ this.page.meta_title }}">
+        <meta name="author" content="OctoberCMS">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="generator" content="OctoberCMS">
+         <link rel="stylesheet" href="{{'assets/bootstrap/css/bootstrap.min.css'|theme}}" type="text/css">
+    <link rel="stylesheet" href="{{'assets/font-awesome/css/fontawesome-all.min.css'|theme}}">
+    <link rel="stylesheet" href="{{'assets/css/magnific-popup.css'|theme}}">
+    <link rel="stylesheet" href="{{'assets/css/owl.carousel.min.css'|theme}}">
+    <link rel="stylesheet" href="{{'assets/css/style.css'|theme}}">
+        {% styles %}
+    </head>
+    <body data-spy="scroll">
+    <div class="ts-page-wrapper" id="page-top">
+
+
+      
+   
+            {% page %}
+        </div>
+
+
+        <!-- Scripts -->
+  <script src="{{'assets/js/custom.hero.js'|theme}}"></script>
+	<script src="{{'assets/js/jquery-3.3.1.min.js'|theme}}"></script>
+	<script src="{{'assets/js/popper.min.js'|theme}}"></script>
+	<script src="{{'assets/bootstrap/js/bootstrap.min.js'|theme}}"></script>
+    <script src="{{'assets/js/imagesloaded.pkgd.min.js'|theme}}"></script>
+    <script src="http://maps.google.com/maps/api/js?key=AIzaSyBEDfNcQRmKQEyulDN8nGWjLYPm8s4YB58"></script>
+	<script src="{{'assets/js/isInViewport.jquery.js'|theme}}"></script>
+	<script src="{{'assets/js/jquery.magnific-popup.min.js'|theme}}"></script>
+	<script src="{{'assets/js/owl.carousel.min.js'|theme}}"></script>
+	<script src="{{'assets/js/scrolla.jquery.min.js'|theme}}"></script>
+	<script src="{{'assets/js/jquery.validate.min.js'|theme}}"></script>
+	<script src="{{'assets/js/jquery-validate.bootstrap-tooltip.min.js'|theme}}"></script>
+    <script src="{{'assets/js/custom.js'|theme}}"></script>
+        {% framework extras %}
+        {% scripts %}
+
+    </body>
+</html>
