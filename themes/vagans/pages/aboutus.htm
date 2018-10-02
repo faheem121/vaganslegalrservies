@@ -5,107 +5,129 @@ layout = "default"
 function onStart(){
 $this['page']='About Vagan Legal Services';
 }
+function onMessage(){
+$data = post();
+$name = $data['name'];
+$email = $data['email'];
+$mime = 'pdf';
+    $vars = ['name' =>   $name, 'email'=>  $email   ];
+      Mail::send('message', $vars, function($message)use ($name,$email) {
+         $message->from($email, $name);
+      $message->to('sri@vaganslegalservices.com','Admin');
+
+        });
+ Flash::success('ThankYou for Choosing Us We will contact you soon!');
+}
 ==
- {% partial "site/pageheader" %}
+{% partial "site/pageheader" %}
 
-            <!--TIMELINE ********************************************************************************************-->
-            <section id="our-life-sotry" class="ts-block ts-separate-bg-element ts-background-repeat" data-bg-image-opacity=".1" data-bg-image="{{'assets/img/bg-pattern-dot.png'|theme}}">
-                <div class="text-center ts-title">
-                    <h1>Our Objectives</h1>
-                    <h4>Vagans Legal Services is a licensed paralegal firm offering tailored legal services to individuals and businesses in the province of Ontario.</h4>
-                    <p>The stronghold in the subject matter coupled with our focused approach & professionalism, Vagans Legal is able to extend its services in a variety of legal areas such as Highway Traffic Act, Landlord/Tenant, Small Claims Court, and License Appeal Tribunal. </p>
-                </div>
-                <!--end ts-title-->
-                <div class="ts-time-line__horizontal">
-                    <ul class="pt-5 owl-carousel" data-owl-items="99" data-owl-auto-width="1">
-                   
+<!--TIMELINE ********************************************************************************************-->
+<section id="our-life-sotry" class="  ts-separate-bg-element ts-background-repeat" style="padding-top: 50px;" data-bg-image-opacity=".1">
+    <div class="text-center ts-title">
+        <h2>Our Objectives</h2>
+        <h4>Vagans Legal Services is a licensed paralegal firm offering tailored legal services to individuals and businesses in the province of Ontario.</h4>
+        <p>The stronghold in the subject matter coupled with our focused approach & professionalism, Vagans Legal is able to extend its services in a variety of legal areas such as Highway Traffic Act, Landlord/Tenant, Small Claims Court, and License Appeal Tribunal. </p>
+    </div>
 
-                        <li class="ts-time-line__item">
-                            <div class="ts-box">
-                                <h5>Vagans Legal's aim is to save your interests, time & money</h5>
-                                <p>
-                                   Time is the essence to turning things in your favor. The moment the client reaches Vagans Legal with the issue, they get an assurance of working with the experts. Sriram Rangan - Licensed Paralegal starts to analyze the minutest of the details to represent case information in an efficient and organized manner. Often it is not even required for the client to appear in the court. Vagans Legal endeavor to ensure that the resources are channelized in more productive things while Sriram Rangan acts as their legal representative.
-                                </p>
-                              
-                            </div>
-                            <!--end ts-box-->
-                            <figure>
-                                <small style=" visibility: hidden;">Mar</small>
-                                <h6 style=" visibility: hidden;">2017</h6>
-                            </figure>
-                            <!--end date-->
-                        </li>
-
-                        <li class="ts-time-line__item">
-                            <div class="ts-box">
-                                <h5>Vagans Legal takes pride in being most accessible and reasonable</h5>
-                                <p>
-                                    Unlike most firms with standard hours of operation, we make ourselves available to our clients at any time of the day and are able to keep our fees extremely reasonable by eliminating the need for unnecessary expenditures.
-                                </p>
-                              
-                            </div>
-                            <!--end ts-box-->
-                            <figure>
-                                <small style=" visibility: hidden;">Apr</small>
-                                <h6 style=" visibility: hidden;">2017</h6>
-                            </figure>
-                            <!--end date-->
-                        </li>
+    <div style="padding-right: 50px; padding-left: 50px;" class="col-sm-6 col-lg-12  py-5 align-self-center">
 
 
-                        <li class="ts-time-line__item">
-                            <div class="ts-box">
-                                <h5>Online System to keep you updated on the proceedings</h5>
-                                <p>
-                                   Stay attuned to the current status of the case as Vagans Legal provides an easy to use interface to enable our clients to check their case updates online. Moreover, a notification is also sent to inform client of the disposition of their case every time we work on it.
-                                </p>
-                             
-                            </div>
-                            <!--end ts-box-->
-                            <figure>
-                                <small style=" visibility: hidden;">Jul</small>
-                                <h6 style=" visibility: hidden;">2017</h6>
-                            </figure>
-                            <!--end date-->
-                        </li>
+        <div class="ts-box" style=" align-items: center;  height: 200px;">
+            <div style="float: left" class=" align-self-center col-sm-12 col-lg-2">
+                <figure class="icon">
 
-                        <li class="ts-time-line__item">
-                            <div class="ts-box">
-                                <h5>Vagans Legal don’t want to be the biggest, Vagans Legal want to be the best</h5>
-                                <p>
-                                    Vagans Legal Services, believe in the importance and value of our work and strive to ensure that Vagans Legal grow long-term relationships with each and every client we associate with. Every request is reviewed thoroughly to ensure clients receive the best possible outcome through our services
-                                </p>
-                          
-                            </div>
-                            <!--end ts-box-->
-                            <figure>
-                                <small style=" visibility: hidden;">Aug</small>
-                                <h6 style=" visibility: hidden;">2017</h6>
-                            </figure>
-                            <!--end date-->
-                        </li>
+                    <div class="ts-circle__md" data-bg-color="#ebf1fe">
+                        <img style="width: 38px; height: 38px;" src="{{'assets/img/portfolio.png'|theme}}" alt="">
+                    </div>
+                </figure>
+            </div>
+            <div style="float: right" class=" align-self-center  col-sm-12 col-lg-10">
+                <h5>Vagans Legal's aim is to save your interests, time & money</h5>
+                <p>
+                    Time is the essence to turning things in your favor. The moment the client reaches Vagans Legal with the issue, they get an assurance of working with the experts. Sriram Rangan - Licensed Paralegal starts to analyze the minutest of the details to represent case information in an efficient and organized manner. Often it is not even required for the client to appear in the court. Vagans Legal endeavor to ensure that the resources are channelized in more productive things while Sriram Rangan acts as their legal representative.
+                </p>
+            </div>
+        </div>
 
-                         <li class="ts-time-line__item">
-                            <div class="ts-box">
-                                <h5>Getting started with Vagans Legal is simple, schedule a free consultation today and take a first step towards gaining the justice you deserve!</h5>
-                                <p>
-                                        </p>
-                                <a href="#form-contact" class="btn btn-dark btn-sm">Contact Us</a>
-                            </div>
-                            <!--end ts-box-->
-                            <figure>
-                                <small style=" visibility: hidden;">Aug</small>
-                                <h6 style=" visibility: hidden;">2017</h6>
-                            </figure>
-                            <!--end date-->
-                        </li>
+        <div class="ts-box" style="height: 200px; align-items: center; ">
+            <div style="float: left" class="col-sm-12 col-lg-2">
+                <figure class="icon">
 
-                        
+                    <div class="ts-circle__md" data-bg-color="#ebf1fe">
+                        <img style="width: 38px; height: 38px;" src="{{'assets/img/settings.png'|theme}}" alt="">
+                    </div>
+                </figure>
+            </div>
+            <div style="float: right" class="col-sm-12 col-lg-10">
+                <h5>Vagans Legal takes pride in being most accessible and reasonable</h5>
+                <p>
+                    Unlike most firms with standard hours of operation, we make ourselves available to our clients at any time of the day and are able to keep our fees extremely reasonable by eliminating the need for unnecessary expenditures.
+                </p>
+            </div>
+        </div>
 
-                       
-                    </ul>
-                </div>
-                <!--end ts-timeline__horizontal-->
-            </section>
-            <!--END TIMELINE ****************************************************************************************-->
- {% partial "site/footer" %}
+        <div class="ts-box" style="height: 200px; align-items: center;">
+            <div style="float: left" class="col-sm-12 col-lg-2">
+                <figure class="icon">
+
+                    <div class="ts-circle__md" data-bg-color="#ebf1fe">
+                        <img style="width: 38px; height: 38px;" src="{{'assets/img/wifi.png'|theme}}" alt="">
+                    </div>
+                </figure>
+            </div>
+            <div style="float: right" class="col-sm-12 col-lg-10">
+                <h5>Online System to keep you updated on the proceedings</h5>
+                <p>
+                    Stay attuned to the current status of the case as Vagans Legal provides an easy to use interface to enable our clients to check their case updates online. Moreover, a notification is also sent to inform client of the disposition of their case every time we work on it.
+                </p>
+            </div>
+        </div>
+
+        <div class="ts-box" style="height: 200px; align-items: center;">
+            <div style="float: left" class="col-sm-12 col-lg-2">
+                <figure class="icon">
+
+                    <div class="ts-circle__md" data-bg-color="#ebf1fe">
+                        <img style="width: 38px; height: 38px;" src="{{'assets/img/star.png'|theme}}" alt="">
+                    </div>
+                </figure>
+            </div>
+            <div style="float: right" class="col-sm-12 col-lg-10">
+                <h5>Vagans Legal don’t want to be the biggest, Vagans Legal want to be the best</h5>
+                <p>
+                    Vagans Legal Services, believe in the importance and value of our work and strive to ensure that Vagans Legal grow long-term relationships with each and every client we associate with. Every request is reviewed thoroughly to ensure clients receive the best possible outcome through our services
+                </p>
+            </div>
+        </div>
+        <!--end ts-box-->
+        <div class="ts-box" style="height: 200px; align-items: center; ">
+            <div style="float: left" class="col-sm-12 col-lg-2">
+                <figure class="icon">
+
+                    <div class="ts-circle__md" data-bg-color="#ebf1fe">
+                        <img style="width: 38px; height: 38px;" src="{{'assets/img/team.png'|theme}}" alt="">
+                    </div>
+                </figure>
+            </div>
+            <div style="float: right" class="col-sm-12 col-lg-10">
+                <h5>Operations & Staff</h5>
+                <p>
+                    Vagans Legals Services internal policies and procedures are thoughtful and comprehensive. All our paralegals are licensed by the Law Society of Upper Canada. Our corporate policy of background check, confidentiality and competency, ensures high level of discreet paralegal services at all times.
+                </p>
+            </div>
+        </div>
+
+        <!--end ts-box-->
+
+        <!--end date-->
+    </div>
+
+</section>
+<section class="text-center">
+    <p style="font-size: 22px;">Getting started with us is simple, schedule a free consultation today and take a first step towards gaining the justice you deserve!</p>
+    <a href="#form-contact" class="btn btn-primary btn-lg py-4 m-5 ts-width__300px">
+        <h3 class="m-0">Contact Now</h3>
+    </a>
+</section>
+<!--END TIMELINE ****************************************************************************************-->
+{% partial "site/footer" %}

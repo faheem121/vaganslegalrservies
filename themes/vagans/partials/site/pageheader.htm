@@ -12,7 +12,7 @@
     <nav style="font-size: 18px; font-weight: 600" class="navbar navbar-expand-lg navbar-dark fixed-top ts-separate-bg-element" data-bg-color="#141a3a">
         <div class="container">
             <a class="navbar-brand" href="#page-top">
-                <img src="{{'assets/img/logo-w.png'|theme}}" alt="">
+                <img  style="width: 190px; height: auto" src="{{'assets/img/logo-w.png'|theme}}" alt="">
             </a>
             <!--end navbar-brand-->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,12 +21,29 @@
             <!--end navbar-toggler-->
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ml-auto">
-                    <a class="nav-item nav-link active ts-scroll" href="/">Home <span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link ts-scroll" href="/aboutus">About Us</a>
-                    <a class="nav-item nav-link ts-scroll" href="/services">Services</a>
-                    <a class="nav-item nav-link ts-scroll" href="/consultation">Consultation</a>
-                    <a class="nav-item nav-link ts-scroll" href="/blog">Blog</a>
+                    <a class="nav-item nav-link  {%if this.page.url== '/' %}
+            active
+            {%endif%}  ts-scroll" href="/">Home</a>
+                    <a class="nav-item nav-link  {%if this.page.url== '/aboutus' %}
+            active
+            {%endif%} ts-scroll" href="/aboutus">About Us</a>
+                    <a class="nav-item nav-link {%if this.page.url== '/services' %}
+            active
+            {%elseif this.page.url== '/Landlord' %}
+                               active
+            {%elseif this.page.url== '/Licensing' %}
+                               active
+            {%elseif this.page.url== '/Provincial' %}
+                               active
+            {%elseif this.page.url== '/Small-Claims' %}
+                               active
+            {%endif%} ts-scroll"   href="/services">Services</a>
+                    <a class="nav-item nav-link {%if this.page.url== '/consultation' %}
+            active
+            {%endif%} ts-scroll" href="/consultation">Consultation</a>
+          
                     <a class="ts-scroll btn btn-primary btn-sm m-1 px-3 ts-width__auto" href="#form-contact">Contact Us</a>
+
                 </div>
                 <!--end navbar-nav-->
             </div>
@@ -52,7 +69,7 @@
     <!--END HERO CONTENT ************************************************************************************-->
 
     <!--HERO BACKGROUND *************************************************************************************-->
-    <div class="ts-background" data-bg-color="#141a3a" data-bg-parallax="scroll" data-bg-parallax-speed="3">
+    <div class="ts-background" data-bg-color="#5b282c" data-bg-parallax="scroll" data-bg-parallax-speed="3">
         <div class="ts-background-image ts-svg ts-z-index__1 ts-background-position-left d-none d-md-block" data-bg-image="{{'assets/svg/shape-mask.svg'|theme}}" data-animate="ts-fadeInLeft"></div>
         <div class="ts-background-image ts-parallax-element" data-bg-image="{{'assets/img/pageheader.jpg'|theme}}" data-animate="ts-zoomOutIn"></div>
     </div>

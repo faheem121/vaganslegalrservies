@@ -5,12 +5,25 @@ layout = "default"
 function onStart(){
 $this['page']='Free Consultation';
 }
+function onMessage(){
+$data = post();
+$name = $data['name'];
+$email = $data['email'];
+$mime = 'pdf';
+    $vars = ['name' =>   $name, 'email'=>  $email   ];
+      Mail::send('message', $vars, function($message)use ($name,$email) {
+         $message->from($email, $name);
+      $message->to('sri@vaganslegalservices.com','Admin');
+
+        });
+ Flash::success('ThankYou for Choosing Us We will contact you soon!');
+}
 ==
 {% partial "site/pageheader" %}
 
 
 <!--OUR TEAM ********************************************************************************************-->
-<section id="our-team" class="ts-block"  style="padding-bottom: 0px;">
+<section id="our-team" class="ts-block" style="padding-bottom: 0px;">
     <div class="container">
         <div class="ts-title">
             <h2>Free Consultation</h2>
@@ -18,22 +31,22 @@ $this['page']='Free Consultation';
         <!--end ts-title-->
         <div class="row">
             <div class="col-sm-6 col-lg-9">
-         
-                        <p >At Vagans Legal Services, it is our goal to support our partners and clients in the legal community in every way possible. Vagans Legal offer a wide variety of legal support services to provide a broader coverage of legal issues. Whether you are looking for a legal support regarding the small claims court, the Landlord and Tenant Board, Traffic Court or otherwise, Sriram Rangan - Licensed Paralegal will listen to your case and discuss your options with you confidentially.</p>
-                        <p >When you reach Vagans Legal Services for a free consultation, Sriram Rangan - Licensed Paralegal will give a free consultation of up to 30 minutes to help you determine your rights and options.
-                            This session is non-binding and does not represent any form of retainer or paralegal – client relationship. It is aimed to gain an insight into the case and evaluate your legal support requirements. Only signing a retainer agreement will constitute a Paralegal client relationship.
-                        </p>
-                   
-                    <!--end ts-card__image-->
-                    
-                    <!--end card-footer-->
-                
+
+                <p>At Vagans Legal Services, it is our goal to support our partners and clients in the legal community in every way possible. Vagans Legal offer a wide variety of legal support services to provide a broader coverage of legal issues. Whether you are looking for a legal support regarding the small claims court, the Landlord and Tenant Board, Traffic Court or otherwise, Sriram Rangan - Licensed Paralegal will listen to your case and discuss your options with you confidentially.</p>
+                <p>When you reach Vagans Legal Services for a free consultation, Sriram Rangan - Licensed Paralegal will give a free consultation of up to 30 minutes to help you determine your rights and options.
+                    This session is non-binding and does not represent any form of retainer or paralegal – client relationship. It is aimed to gain an insight into the case and evaluate your legal support requirements. Only signing a retainer agreement will constitute a Paralegal client relationship.
+                </p>
+
+                <!--end ts-card__image-->
+
+                <!--end card-footer-->
+
                 <!--end card-->
             </div>
 
             <!--end col-md-3-->
             <div class="col-sm-6 col-lg-3">
-                
+
                 <div class="card">
                     <div class="ts-card__image ts-img-into-bg">
                         <img class="card-img-top" src="{{'assets/img/Untitled-1.jpg'|theme}}" alt="Card image cap">
@@ -53,7 +66,7 @@ $this['page']='Free Consultation';
     <!--end container-->
 </section>
 <!--END OUR TEAM ****************************************************************************************-->
-<section id="our-team" >
+<section id="our-team">
     <div class="container">
         <div class="ts-title">
             <h2>Your Justice is Our Success!</h2>
@@ -61,24 +74,24 @@ $this['page']='Free Consultation';
         <!--end ts-title-->
         <div class="row">
             <div class="col-sm-6 col-lg-12">
-                
-                 <div class="col-sm-6 col-lg-9">
-                   <div class=" pr-3">
-       <p style="padding-left: 20px; padding-right: 20px; padding-top: 30px;">
+
+                <div class="col-sm-6 col-lg-9">
+                    <div class=" pr-3">
+                        <p style="padding-left: 20px; padding-right: 20px; padding-top: 30px;">
                             At Vagans Legal Services, all our efforts are channelized towards gaining you the desired justice. In most of the cases the justice is lost either because the client doesn’t respond to a critical matter promptly or don’t know the right way to proceed. To eliminate this gap between time & action, we give them the unbiased legal advice with full integrity & precision.
                             It is up to you if you want to continue with us as your paralegal. The session will definitely put you in the right direction to get you closer to your justice.
 
                         </p>
 
-                   
-                    <!--end ts-card__image-->
-                    
-                    <!--end card-footer-->
-                </div>
-                <!--end card-->
-            </div>
 
-               
+                        <!--end ts-card__image-->
+
+                        <!--end card-footer-->
+                    </div>
+                    <!--end card-->
+                </div>
+
+
                 <!--end card-->
             </div>
 

@@ -1,0 +1,260 @@
+title = "Privacy Policy"
+url = "/privacypolicy"
+layout = "default"
+==
+function onStart(){
+$this['page']='Privacy Policy';
+}
+function onMessage(){
+$data = post();
+$name = $data['name'];
+$email = $data['email'];
+$mime = 'pdf';
+    $vars = ['name' =>   $name, 'email'=>  $email   ];
+      Mail::send('message', $vars, function($message)use ($name,$email) {
+         $message->from($email, $name);
+      $message->to('sri@vaganslegalservices.com','Admin');
+
+        });
+ Flash::success('We will contact you soon!');
+}
+==
+{% partial "site/pageheader" %}
+<!--ABOUT US ********************************************************************************************-->
+<section id="about-us">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ts-block pr-3">
+                    <div class=" ts-title  text-center">
+                        <h2>Privacy Policy</h2>
+                    </div>
+                    <!--end ts-title-->
+
+                    <p style="text-align:justify">
+                        This privacy policy explains the ways in which Vagans Legal Services Professional Corporation (“we”, “our” or “us”) will collect Personal Information about you (‘‘you” or “your”), as well as how we will use and disclose your Personal Information.
+                    </p>
+                    <div class=" text-left">
+                        <h4 style="text-decoration: underline; font-weight: bold;">Personal Information</h4>
+                    </div>
+                    <p style="text-align:justify">Canada’s Personal Information Protection And Electronic Documents Act (“PIPEDA”) defines “Personal Information” as information about an identifiable individual. Personal Information does not include the name, work title, work address, work telephone or fax number, or electronic address of an employee. PIPEDA requires that your consent be obtained before your Personal Information is collected, used, or disclosed in the course of commercial activities.</p>
+                    <div class=" text-left">
+                        <h4 style="text-decoration: underline; font-weight: bold;">Your Consent</h4>
+                    </div>
+                    <p style="text-align:justify">Each time that you: (a) retain us to provide any of our products (“Product(s)”) or services (“Service(s)”); (b) download, access, view, or use our website at http://vaganslegalservices.com (“Website”); (c) download, access, view, or use our software application for mobile devices called Vagans Traffix (“App”); or (d) purchase or use any of our Products or Services, you consent to our collecting, using, and disclosing your Personal Information in accordance with the terms of this Privacy Policy. It is therefore important that you read all of this Privacy Policy.</p>
+                    <div class=" text-left">
+                        <h4 style="text-decoration: underline; font-weight: bold;">Changes To This Privacy Policy</h4>
+                    </div>
+                    <p style="text-align:justify">It is also important that you review our Privacy Policy periodically as we may change the terms of this Privacy Policy from time to time. Each change made by us will become effective at the time we post notice of the changed terms on our Website or on our App. So please review this Privacy Policy from time to time to see what’s changed – since these changes will apply to you.</p>
+
+                    <div class=" text-left">
+                        <h4 style="text-decoration: underline; font-weight: bold;">Our Products And Services</h4>
+                    </div>
+                    <p style="text-align:justify">Through our offices in Toronto, Ontario, and our Website, we offer Products and Services related to various matters governed by the laws of the Province of Ontario, Canada (“Ontario”).
+                        <br>
+                        Through our App, we offer a Service to those accused which have been charged with an offence under Ontario’s Highway Traffic Act (“HTA”). One option normally available to such an accused is the right to attend at the local court office in Ontario to dispute the charge and request a trial date. For various reasons, this may be impossible, or inconvenient, for an accused to do.
+                        <br>
+                        Using the App, a registered user can: (a) retain us and pay our fee; (b) forward a copy of their Ontario Provincial Offence Notice to us which sets out the HTA offence; (c) create the Notice of
+                        <br>
+
+
+                        Appearance document needed by the user to dispute the HTA offence and request a trial date; and (d) have us attend at the local court office in Ontario to file the Notice of Appearance on the
+                        user’s behalf. We will then upload a copy of the Notice of Appearance filed with the court into the user’s account.
+                    </p>
+                    <div class=" text-left">
+                        <h4 style="text-decoration: underline; font-weight: bold;">Our Accountability</h4>
+                    </div>
+                    <p style="text-align:justify">We are responsible for Personal Information under our control. Our Privacy Officer, who can be reached at info@vaganslegalservices.com, is accountable for our compliance with this Privacy Policy.
+                    </p>
+                    <div class=" text-left">
+                        <h4 style="text-decoration: underline; font-weight: bold;">How We Collect Personal Information</h4>
+                    </div>
+                    <p style="text-align:justify">We may collect Personal Information about you when you communicate with us in person, or by courier, mail, telephone, facsimile, e-mail, electronic, live chat, or other means.
+                        <br>
+                        We will collect Personal Information about you when you retain us, establish an account with us, provide credit or payment information to us, or purchase or use any of our Products or Services.
+                        <br>
+                        We may collect Personal Information about you by electronic means when you download, access, view, or use our Website or our App, or become a registered user of our App.
+                        <br>
+                        When you engage in any of the above electronic activities, we, along with our third party service providers, suppliers, consultants, advertisers, networks, platforms, agencies, distribution, and other partners (“Partner(s)”), may collect Personal Information about you, your computer, your mobile phone, your mobile application, or other device by passive or automated means.
+                        <br>
+                        This may include but is not limited to network or Internet protocol addresses, type of internet browser being used, type of operating system being used, the name of your Internet service provider and the domains used by such provider, your mobile network, your device identifiers, your device settings, your browser settings, the web pages of our Website which you have visited, the type of handheld or mobile device you used to download, access, view, or use our Website or App, your location information, and the websites, content and advertisements you have accessed, seen, forwarded, or clicked on.
+                        <br>
+                        We and/or our Partners may use “cookies”, “Web beacons”, and other tracking technologies to enhance your user experience when visiting our or Website. Cookies are small pieces of information placed in your internet browser which identify you when you visit a website.
+                        <br>
+                        We and/or our Partners may place advertisements, links, media, and other notices on our Website and/or App, use technology to advertise to you when you download, access, view, or use our Website or App, or download, access, view, or use other websites or other mobile applications. Our Partners may use various technologies to collect your Personal Information. This Personal Information will be governed by the privacy policies of our Partners rather than this policy.
+
+
+                        <br>
+                        If you download, access, view, or use our Website or App through a mobile device or a mobile application, we and/or our Partners may ask you to share your geo-location information.
+                        <br>
+                        If you interact with us and/or our Partners on or though Social Media, we and/or our Partners may collect Personal Information about you, as well about your friends, contacts, connections, people you follow, people who follow you, your posts, and your preferences.
+                        <br>
+                        We may also use technology on our Website and/or App to collect, determine, and analyze generic information regarding website and app trends, user movement across our Website and App, demographic information about users of our Website and App, key elements which users of our Website or App select or click on, and to look up internet addresses on the internet to determine general geographic trends of parties using our Website or App. This information will be generic.
+                        <br>
+                        We may combine your Personal Information with that of others to create aggregate data. Aggregate data is general information about groups of users but not about you. We will use such data to improve our Website, App, Products, and Services (individually and collectively referred to as “Our Products And Services”) and to develop new websites, apps, products, and services.
+
+                    </p>
+                    <div class=" text-left">
+                        <h4 style="text-decoration: underline; font-weight: bold;">What Type Of Personal Information Do We Typically Collect?</h4>
+                    </div>
+                    <p style="text-align:justify">Although it may vary, the Personal Information we will typically collect from you when you retain us will be: (a) your legal name, home address, home phone number, home e-mail address, personal cell phone number, and birth date; (b) a copy of your passport or birth certificate; (c) a copy of your driver’s license; (d) your credit card and other payment information; and (e) a copy of your Ontario Provincial Offence Notice if you are charged with an offence under the HTA.
+                    </p>
+                    <div class=" text-left">
+                        <h4 style="text-decoration: underline; font-weight: bold;">
+                            Purposes For Which We Will Collect, Use, And Disclose Personal Information.
+                        </h4>
+                    </div>
+                    <p style="text-align:justify">We will collect, use, and disclose your Personal Information for the following purposes (“Identified Purposes”):
+                    </p>
+
+                    <ul type="square">
+                        <li><span style=" font-weight: bold; font-size: 20px; margin-right: 15px;">•</span> To establish and confirm your identity;</li>
+                        <li><span style=" font-weight: bold; font-size: 20px; margin-right: 15px;">•</span>To confirm the scope and terms of our retainer, as well as to communicate with you regarding matters related to our retainer;</li>
+                        <li><span style=" font-weight: bold; font-size: 20px; margin-right: 15px;">•</span>To fulfill our professional obligations to the Law Society of Ontario;</li>
+                        <li><span style=" font-weight: bold; font-size: 20px; margin-right: 15px;">•</span>To create your account with us and to obtain contact and payment information;</li>
+                        <li><span style=" font-weight: bold; font-size: 20px; margin-right: 15px;">•</span> To provide the Products and/or Services which you have purchased from us and to communicate with you regarding those Products and/or Services;</li>
+                        <li><span style=" font-weight: bold; font-size: 20px; margin-right: 15px;">•</span>To download, install, and operate our App on your mobile device or mobile application;</li>
+                        <li><span style=" font-weight: bold; font-size: 20px; margin-right: 15px;">•</span>To establish you as a registered user of App;</li>
+                        <li><span style=" font-weight: bold; font-size: 20px; margin-right: 15px;">•</span> To monitor and maintain performance of our App and to conduct security assessments of our App;</li>
+                        <li><span style=" font-weight: bold; font-size: 20px; margin-right: 15px;">•</span>To process payment to us for the Products and/or Services you have purchased from us;
+
+                        </li>
+                        <li><span style=" font-weight: bold; font-size: 20px; margin-right: 15px;">•</span>To provide technical support to you regarding our Website and/or our App and to modify, enhance, update, and create new versions of Our Products And Services;</li>
+                        <li><span style=" font-weight: bold; font-size: 20px; margin-right: 15px;">•</span>To communicate with you regarding new or other products or services offered by us and/or by our Partners that we believe may be of interest to you;</li>
+                        <li><span style=" font-weight: bold; font-size: 20px; margin-right: 15px;">•</span>To store and process your Personal Information and the content that you provide to us;</li>
+                        <li><span style=" font-weight: bold; font-size: 20px; margin-right: 15px;">•</span>To create, maintain, and update our business records, and to generate and distribute internal records and reports;</li>
+                        <li><span style=" font-weight: bold; font-size: 20px; margin-right: 15px;">•</span>To manage and operate our business, to obtain goods and services from our Partners and other third parties, and to enter into contracts and agreements related to our business;</li>
+                        <li><span style=" font-weight: bold; font-size: 20px; margin-right: 15px;">•</span>To develop media, content, and/or advertisements based upon your browsing and/or purchase history targeted towards your specific needs or interests (“Targeted Ads”); </li>
+                        <li><span style=" font-weight: bold; font-size: 20px; margin-right: 15px;">•</span>To advertise our Products And Services, and/or third party products and services, on our Website and/or App through generic advertisements (“Generic Ads) and/or Targeted Ads;</li>
+                        <li><span style=" font-weight: bold; font-size: 20px; margin-right: 15px;">•</span>To authorize our Partners to advertise their products and services, and/or other products and services, on our Website and/or App by using Generic Ads and/or Targeted Ads;</li>
+                        <li><span style=" font-weight: bold; font-size: 20px; margin-right: 15px;">•</span>To place advertisements, links, media, and other notices on our Website and/or our App for the above advertising purposes;</li>
+                        <li><span style=" font-weight: bold; font-size: 20px; margin-right: 15px;">•</span>To comply with legal and regulatory requirements, to assert and enforce our legal rights and remedies, and to initiate or defend against legal proceedings;</li>
+                        <li><span style=" font-weight: bold; font-size: 20px; margin-right: 15px;">•</span>To take action regarding any suspected or actual unlawful activities involving us, Our Products And Services, any user of Our Products And Services, or any third party, including interacting with police and other public safety organizations;</li>
+                        <li><span style=" font-weight: bold; font-size: 20px; margin-right: 15px;">•</span> To notify you of any breach by you of the terms of use of our Website and/or App; </li>
+                        <li><span style=" font-weight: bold; font-size: 20px; margin-right: 15px;">•</span>To deal with emergency situations with respect to which we believe the life, health, or safety of any person may be in danger;
+
+                        </li>
+                        <li><span style=" font-weight: bold; font-size: 20px; margin-right: 15px;">•</span>To sell or otherwise dispose of all or any part of our company, our parent, affiliated, and/or subsidiary corporations (“Related Entities”), our respective shares, assets, or business, and/or our Products And Services;</li>
+                        <li><span style=" font-weight: bold; font-size: 20px; margin-right: 15px;">•</span>To merge our company and/or Related Entities with any other entity or entities; </li>
+                        <li><span style=" font-weight: bold; font-size: 20px; margin-right: 15px;">•</span>To enable our company and/or Related Entities to purchase any other entity or entities.</li>
+                    </ul>
+
+                    <p style="text-align:justify">
+                        We may disclose your Personal Information for the Identified Purposes to our directors, officers, employees, and shareholders, to our Related Entities, and to our Partners who are required to maintain same in confidence.
+                        <br>
+                        We may use our Partners to store your Personal Information, as well as the content that you provide to us, outside of Canada using an internet based, cloud services, platform or other technology. We may also use other Partners, such as Mailchimp, to communicate directly with you for the Identified Purposes. These Partners may also be located outside of Canada.
+                        <br>
+                        If any of our Partners is located outside of Canada, our Partner will be bound by the laws of the jurisdiction in which the Partner is located. In such event, your Personal Information may be collected, used, and disclosed by our Partner in accordance with the laws of that jurisdiction.
+                        <br>
+                        When your Personal Information is to be collected, used, or disclosed by us for a purpose not previously identified by us, the new purpose shall be identified by us prior to collection, use, and disclosure. Unless the new purpose is authorized by PIPEDA, your consent will be obtained by us before the Personal Information will be collected, used, or disclosed for the new purpose.
+                        <br>
+                        PIPEDA contains provisions which authorize the collection, use, and/or disclosure of Personal Information without the knowledge or consent of the relevant individual. These PIPEDA provisions may be amended by legislation from time to time. Each such PIPEDA provision, as amended from time to time, shall be in addition to each of the Identified Purposes set out above.
+                        <br>
+                        We will not knowingly collect Personal Information through our Products and Services from any individual under the age of thirteen.
+                    </p>
+                    <div class=" text-left">
+                        <h4 style="text-decoration: underline; font-weight: bold;">
+                            Limiting Collection
+                        </h4>
+                    </div>
+                    <p style="text-align:justify">Our collection of your Personal Information shall be limited to that which is necessary for the Identified Purposes. We shall only collect your Personal Information by fair and lawful means.
+                    </p>
+                    <div class=" text-left">
+                        <h4 style="text-decoration: underline; font-weight: bold;">Limiting Use, Disclosure And Retention</h4>
+                    </div>
+                    <p style="text-align:justify">We will not use or disclose any of your Personal Information for any purpose other than the Identified Purposes except with your Consent, as authorized by PIPEDA, or as required by law.
+                        <br>
+                        Your Personal Information will be retained by us only as long as is necessary to fulfill the Identified Purposes. Where your Personal Information is no longer required by us to fulfill the Identified Purposes, it will be destroyed, erased, or made anonymous except where it forms part of aggregated statistical data where your individual information cannot be traced back to you.
+
+
+                    </p>
+                    <div class=" text-left">
+                        <h4 style="text-decoration: underline; font-weight: bold;">Accuracy</h4>
+                    </div>
+                    <p style="text-align:justify">The Personal Information which we collect from you shall be as accurate, complete, and up-to-date as is necessary for the Identified Purposes.
+
+
+                    </p>
+                    <div class=" text-left">
+                        <h4 style="text-decoration: underline; font-weight: bold;">Safeguards</h4>
+                    </div>
+                    <p style="text-align:justify">The Personal Information which we collect from you shall be protected by security safeguards appropriate to the sensitivity of the information.
+                        <br>
+                        We will use reasonable and appropriate security procedures consistent with those prevailing industry standards existing within the Province of Ontario, to protect your Personal Information.
+                        <br>
+                        While we strive to protect your Personal Information by following accepted industry standards, we cannot warrant or guarantee the absolute security of your Personal Information.
+
+
+
+                    </p>
+                    <div class=" text-left">
+                        <h4 style="text-decoration: underline; font-weight: bold;">Openness</h4>
+                    </div>
+                    <p style="text-align:justify">Upon request, we will make readily available to you specific information about our policies and practices relating to the management of Personal Information under our control.
+
+                    </p>
+                    <div class=" text-left">
+                        <h4 style="text-decoration: underline; font-weight: bold;">Individual Access</h4>
+                    </div>
+                    <p style="text-align:justify">Upon our receipt of your written request, we will, subject to the provisions of PIPEDA, inform you of the existence, use, and disclosure by us of any of the Personal Information which we collected from you. You may challenge the accuracy and completeness of any of your Personal Information under our control and have it amended as appropriate.
+                        <br>
+                        We will respond to your written request within a reasonable period of time. Generally this will be within thirty (30) calendar days of our receipt of your written request. However, we may require an additional thirty (30) calendar days to respond to your request. In such event, we will send you a notice of extension prior to the expiry of the first thirty (30) calendar day period.
+                        <br>
+                        If you have a sensory disability, we may, subject to the provisions of PIPEDA, be able to provide you with access to your Personal Information in an alternate format.
+                        <br>
+                        Please note however that, in certain circumstances, we may not be able to provide access to all of your Personal Information which we hold about you.
+                        <br>
+                        In providing an account of third parties to which we may have disclosed Personal Information, we will attempt to be as specific as possible. However, where it is not possible to provide a list of
+
+                        <br>
+                        specific organizations to which we have actually disclosed your Personal Information, we will provide a list of organizations to which we may have disclosed Personal Information about you.
+                        <br>
+                        Our response will usually be provided at no cost to you. However, we reserve the right, depending upon the nature of the request and the Personal Information involved, to charge you our costs to process each of your requests.
+                        <br>
+                        In any case where there may be a cost charged by us to process a request made by you, we will notify you in advance. If we do so, the identified costs must be paid by you to us in advance of our beginning to process such request.
+                        <br>
+                        If you successfully demonstrate to us the inaccuracy or incompleteness of Personal Information under our control collected by us from you, we will amend your Personal Information under our control as required.
+
+                    </p>
+                    <div class=" text-left">
+                        <h4 style="text-decoration: underline; font-weight: bold;">Challenging Compliance</h4>
+                    </div>
+                    <p style="text-align:justify">We will investigate all written privacy complaints which we receive from you related to Personal Information about you which we collected from you.
+                        <br>
+                        If you wish to make a privacy complaint related to Personal Information about you which we have collected, please indicate on your complaint your name, email address, and telephone number where we may contact you.
+                        <br>
+                        Please send your complaint to our privacy officer at info@vaganslegalservices.com. If we find the complaint to be justified, we will take such action as is appropriate to comply with PIPEDA and this Privacy Policy.
+
+
+                    </p>
+                    <div class=" text-left">
+                        <h4 style="text-decoration: underline; font-weight: bold;">Contact Us</h4>
+                    </div>
+                    <p style="text-align:justify">If you have any questions regarding this Privacy Policy, please forward your inquiries via e-mail to our Privacy Officer at info@vaganbslegalservices.com<br>
+
+                        Vagans Legal Services Professional Corporation<br>
+                        8130 Sheppard Ave E<br>
+                        Unit 104<br>
+                        Toronto, Ontario<br>
+                        Canada<br>
+                        M1B 3W3<br>
+                        Phone: 416-473-8472
+
+
+
+                    </p>
+
+                </div>
+            </div>
+            <!--end col-md-6-->
+        </div>
+        <!--end row-->
+    </div>
+    <!--end container-->
+
+
+    <!--end ts-background-->
+
+</section>
+<!--END ABOUT US ****************************************************************************************-->
+{% partial "site/footer" %}

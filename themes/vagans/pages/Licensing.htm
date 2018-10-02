@@ -5,6 +5,19 @@ layout = "default"
 function onStart(){
 $this['page']='License Appeal Tribunal';
 }
+function onMessage(){
+$data = post();
+$name = $data['name'];
+$email = $data['email'];
+$mime = 'pdf';
+    $vars = ['name' =>   $name, 'email'=>  $email   ];
+      Mail::send('message', $vars, function($message)use ($name,$email) {
+         $message->from($email, $name);
+      $message->to('sri@vaganslegalservices.com','Admin');
+
+        });
+ Flash::success('ThankYou for Choosing Us We will contact you soon!');
+}
 ==
 {% partial "site/pageheader" %}
 <!--ABOUT US ********************************************************************************************-->
